@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		A65EE8942B451B7300C6ECDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EE8932B451B7300C6ECDA /* ContentView.swift */; };
 		A65EE8962B451B7400C6ECDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65EE8952B451B7400C6ECDA /* Assets.xcassets */; };
 		A65EE8992B451B7400C6ECDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65EE8982B451B7400C6ECDA /* Preview Assets.xcassets */; };
+		A65EE8A12B45453500C6ECDA /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = A65EE8A02B45453500C6ECDA /* Apollo */; };
+		A65EE8A42B454E7500C6ECDA /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = A65EE8A32B454E7500C6ECDA /* schema.graphqls */; };
+		A65EE8A62B45503600C6ECDA /* RocketsQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A65EE8A52B45503600C6ECDA /* RocketsQuery.graphql */; };
+		A65EE8A92B45544300C6ECDA /* SpaceXAPI in Frameworks */ = {isa = PBXBuildFile; productRef = A65EE8A82B45544300C6ECDA /* SpaceXAPI */; };
+		A65EE8AB2B45555E00C6ECDA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EE8AA2B45555E00C6ECDA /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		A65EE8932B451B7300C6ECDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A65EE8952B451B7400C6ECDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65EE8982B451B7400C6ECDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A65EE8A32B454E7500C6ECDA /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		A65EE8A52B45503600C6ECDA /* RocketsQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = RocketsQuery.graphql; sourceTree = "<group>"; };
+		A65EE8AA2B45555E00C6ECDA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65EE8A12B45453500C6ECDA /* Apollo in Frameworks */,
+				A65EE8A92B45544300C6ECDA /* SpaceXAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				A65EE8912B451B7300C6ECDA /* SpaceXApp.swift */,
-				A65EE8932B451B7300C6ECDA /* ContentView.swift */,
+				A65EE8A22B454E5500C6ECDA /* GraphQL */,
+				A65EE8AC2B45556300C6ECDA /* Manager */,
+				A65EE8AD2B45557700C6ECDA /* Screens */,
 				A65EE8952B451B7400C6ECDA /* Assets.xcassets */,
 				A65EE8972B451B7400C6ECDA /* Preview Content */,
 			);
@@ -65,6 +77,31 @@
 				A65EE8982B451B7400C6ECDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A65EE8A22B454E5500C6ECDA /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				A65EE8A32B454E7500C6ECDA /* schema.graphqls */,
+				A65EE8A52B45503600C6ECDA /* RocketsQuery.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		A65EE8AC2B45556300C6ECDA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A65EE8AA2B45555E00C6ECDA /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A65EE8AD2B45557700C6ECDA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A65EE8932B451B7300C6ECDA /* ContentView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,10 @@
 			dependencies = (
 			);
 			name = SpaceX;
+			packageProductDependencies = (
+				A65EE8A02B45453500C6ECDA /* Apollo */,
+				A65EE8A82B45544300C6ECDA /* SpaceXAPI */,
+			);
 			productName = SpaceX;
 			productReference = A65EE88E2B451B7300C6ECDA /* SpaceX.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,10 @@
 				Base,
 			);
 			mainGroup = A65EE8852B451B7300C6ECDA;
+			packageReferences = (
+				A65EE89F2B45453500C6ECDA /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				A65EE8A72B45544300C6ECDA /* XCLocalSwiftPackageReference "SpaceXAPI" */,
+			);
 			productRefGroup = A65EE88F2B451B7300C6ECDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65EE8992B451B7400C6ECDA /* Preview Assets.xcassets in Resources */,
+				A65EE8A42B454E7500C6ECDA /* schema.graphqls in Resources */,
+				A65EE8A62B45503600C6ECDA /* RocketsQuery.graphql in Resources */,
 				A65EE8962B451B7400C6ECDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65EE8AB2B45555E00C6ECDA /* NetworkManager.swift in Sources */,
 				A65EE8942B451B7300C6ECDA /* ContentView.swift in Sources */,
 				A65EE8922B451B7300C6ECDA /* SpaceXApp.swift in Sources */,
 			);
@@ -342,6 +390,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A65EE8A72B45544300C6ECDA /* XCLocalSwiftPackageReference "SpaceXAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SpaceXAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A65EE89F2B45453500C6ECDA /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A65EE8A02B45453500C6ECDA /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A65EE89F2B45453500C6ECDA /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		A65EE8A82B45544300C6ECDA /* SpaceXAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceXAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A65EE8862B451B7300C6ECDA /* Project object */;
 }
